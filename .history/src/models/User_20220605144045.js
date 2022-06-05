@@ -1,0 +1,23 @@
+const Mongoose  from "mongoose";
+
+const userSchima = new Mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    email :{
+        type:String,
+        required:true,
+        unique:true
+    },
+    password :{
+        type:String,
+        required:true
+    },
+},{
+    timestamps: true
+})
+
+const userModel = Mongoose.model('user',userSchima);
+export default userModel;
+// User Model
