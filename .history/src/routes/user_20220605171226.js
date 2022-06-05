@@ -5,5 +5,5 @@ const UserController = require('../controllers/user.controller');
 
 // Create routes for user here
 router.post('/',createUser);
-router.get('/:email',getUser);
+router.get('/(:email)',getUser);
 module.exports = router;
